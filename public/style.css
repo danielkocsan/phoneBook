@@ -1,0 +1,197 @@
+html {
+    height: 100%;
+    font-family: arial;
+    font-size: 14px;
+}
+body {
+    background-image: linear-gradient(top, rgb(10,10,10) 0%, rgb(102,90,74) 52%);
+    background-image: -o-linear-gradient(top, rgb(10,10,10) 0%, rgb(102,90,74) 52%);
+    background-image: -moz-linear-gradient(top, rgb(10,10,10) 0%, rgb(102,90,74) 52%);
+    background-image: -webkit-linear-gradient(top, rgb(10,10,10) 0%, rgb(102,90,74) 52%);
+    background-image: -ms-linear-gradient(top, rgb(10,10,10) 0%, rgb(102,90,74) 52%);
+    padding: 0 0;
+    margin: 0;
+}
+.clearfix:after {
+    clear: both;
+    display: block;
+    content: '\0020';
+}
+
+#create-form {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #99B2B7;
+    padding: 1em 1em 1em 2em;
+    color: #D5DED9;
+    box-shadow: .1em .1em .5em .1em rgba(0, 0, 0, .2);
+    position: relative;
+    margin: 3em 2em 0 0;
+    border-radius: .5em;
+}
+#create-form:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0.5em;
+    height: 100%;
+    opacity: .9;
+    background-color: #D5DED9; 
+}
+#create-form h2 {
+    font-family: 'New Times Roman', Georgia;
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+#create-form section {
+    display: block;
+    margin: .5em 0;
+}
+#create-form section:after {
+    clear: both;
+    display: block;
+    content: '\0020';
+}
+form label {
+    display: block;
+    float: left;
+    width: 40%;
+    margin: 0.2em 0 0 0;
+    font-family: 'New Times Roman', Georgia;
+    font-size: 1em;
+}
+
+form input.submit,
+form input.text,
+form textarea {
+    width: 50%;
+    background-color: #D5DED9;
+    border: 1px solid #99B2B7;
+    border-radius: .5em;
+    color: #99B2B7;
+    font-size: .8em;
+    line-height: 1.5em;
+    padding: .2em 1em;
+    box-shadow: .1em 0 .5em .1em rgba(0, 0, 0, .1);
+}
+
+form input.submit {
+    margin: 1em 60% 0 0;
+    width: 40%;
+    font-family: 'New Times Roman', Georgia;
+    font-size: 1em;
+    text-transform: capitalize;
+    background-color: #D5DED9;
+    color: #99B2B7;
+    border-radius: 0;
+    cursor: pointer;
+    opacity: .8;
+}
+
+form .error-message {
+    display: none;
+    background-color: red;
+    color: white;
+    line-height: 2em;
+    font-size: .8em;
+    padding: 0 1em;
+    border-radius: .5em;
+    box-shadow: .1em 0 .5em .1em rgba(0, 0, 0, .1);
+}
+form .error-message.active{
+    display: inline;
+}
+
+form input.submit:hover {
+    opacity: 1;
+}
+#list {
+    padding: .5em;
+    width: 70%;
+    margin-left: 25%;
+}
+
+#list > div {
+    display: block;
+    width: 27%;
+    height: 10em;
+    float: left;
+    position: relative;
+    margin: .5em;
+    padding: .5em 1em;
+    opacity: 1;
+    color: black;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: .5em;
+    box-shadow: .1em .1em .5em .1em rgba(0, 0, 0, .2);
+    line-height: 1.5em;
+}
+#list > div:hover {
+    box-shadow: .5em .5em 1em .1em rgba(0, 0, 0, .5);
+}
+#list > div:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    background-image: linear-gradient(top, rgb(255,255,255) 0%, rgb(245,241,235) 52%);
+    background-image: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(245,241,235) 52%);
+    background-image: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(245,241,235) 52%);
+    background-image: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(245,241,235) 52%);
+    background-image: -ms-linear-gradient(top, rgb(255,255,255) 0%, rgb(245,241,235) 52%);
+    border-radius: .5em;
+    z-index: -1;
+}
+#list span {
+    display: block;
+}
+#list .name {
+    font-size: 1.7em;
+    line-height: 2em;
+    font-family: 'Times New Roman', Georgia;
+    margin: 0 0 .3em 0;
+    color: #99B2B7;
+}
+#list .name:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1em;
+    opacity: .8;
+    background-color: #99B2B7;
+}
+
+#list .name > .firstName{
+    padding-right: .5em;
+}
+
+#list .name > span {
+    display: inline;
+}
+
+#list a {
+    color: #99B2B7;
+    text-decoration: none;
+}
+#list a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1020px) {
+    #list > div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #list > div {
+        width: 80%;
+    }
+}

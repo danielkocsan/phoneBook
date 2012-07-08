@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phone book</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+        <form action="http://localhost/phoneBook/api/save" method="POST" enctype="application/x-www-form-urlencoded" id="create-form">
+            <h2>Add new</h2>
+            <section>
+                <label for="first-name">First name:</label>
+                <input name="firstName" id="first-name" class="text" />
+            </section>
+            <section>
+                <label for="last-name">Last name:</label>
+                <input name="lastName" id="last-name" class="text" />
+            </section>
+            <section>
+                <label for="phone-number">Phone number:</label>
+                <input name="phone" id="phone-number" class="text" />
+            </section>
+            <section>
+                <label for="email">Email:</label>
+                <input name="email" id="email" class="text" />
+            </section>
+            <section>
+                <label for="email">Address:</label>
+                <textarea name="address" id="address"></textarea>
+            </section>
+            <input type="submit" value="create" class="submit" />
+        </form>
+        
+        <div id="list" class="clearfix"></div>
+        
+        <script type="text/javascript" src="javascript/phoneBook.js"></script>
+        <script type="text/javascript" src="jsConfig.php"></script>
+        <script type="text/javascript" src="javascript/model/model.js"></script>
+        <script type="text/javascript" src="javascript/model_handler/model_handler.js"></script>
+        <script type="text/javascript" src="javascript/lister/lister.js"></script>
+        <script type="text/javascript" src="javascript/list_item_person/list_item_person.js"></script>
+        <script type="text/javascript" src="javascript/form/form.js"></script>
+        <script type="text/javascript" src="javascript/validator/validator.js"></script>
+        <script type="text/javascript" src="javascript/validator/required/required.js"></script>
+        <script type="text/javascript" src="javascript/validator/phone/phone.js"></script>
+        <script type="text/javascript" src="javascript/validator/email/email.js"></script>
+    </body>
+</html>
